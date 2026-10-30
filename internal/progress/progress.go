@@ -14,7 +14,7 @@ import (
 	"sync"
 	"time"
 
-	"channel_build/internal/cli"
+	"github.com/DeAikon/DollyGo/internal/cli"
 )
 
 // spinnerFrames 是 braille 帧序列。

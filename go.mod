@@ -1,3 +1,3 @@
-module channel_build
+module github.com/DeAikon/DollyGo
 
 go 1.24

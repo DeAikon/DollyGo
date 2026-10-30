@@ -23,8 +23,8 @@ import (
 	"sync/atomic"
 	"time"
 
-	"channel_build/internal/i18n"
-	"channel_build/internal/proc"
+	"github.com/DeAikon/DollyGo/internal/i18n"
+	"github.com/DeAikon/DollyGo/internal/proc"
 )
 
 // BaseApkName 是目标项目 release 基础包的固定文件名。

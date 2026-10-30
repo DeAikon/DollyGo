@@ -9,7 +9,7 @@ import (
 	"os/exec"
 	"path/filepath"
 
-	"channel_build/internal/proc"
+	"github.com/DeAikon/DollyGo/internal/proc"
 )
 
 // AssembleRelease 执行 ./gradlew --no-daemon clean :app:assembleRelease（先 clean 再 assemble），

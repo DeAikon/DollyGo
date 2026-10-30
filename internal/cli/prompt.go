@@ -6,7 +6,7 @@ import (
 	"io"
 	"strings"
 
-	"channel_build/internal/i18n"
+	"github.com/DeAikon/DollyGo/internal/i18n"
 )
 
 // SigningView 是展示用的签名信息视图（**不含密码**，从设计上保证屏蔽）。

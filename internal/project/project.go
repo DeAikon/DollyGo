@@ -11,7 +11,7 @@ import (
 	"strconv"
 	"strings"
 
-	"channel_build/internal/proc"
+	"github.com/DeAikon/DollyGo/internal/proc"
 )
 
 func gradlew(root string) string { return filepath.Join(root, "gradlew") }

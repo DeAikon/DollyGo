@@ -1,4 +1,4 @@
-// channelbuild - VasDolly 多渠道打包工具
+// DollyGo - VasDolly 多渠道打包工具
 //
 // 流程：解析参数 → 前置检查 → 分支校验 → 采集信息 → 确认 → 构建基础包 →
 //
@@ -22,15 +22,15 @@ import (
 	"syscall"
 	"time"
 
-	"channel_build/internal/build"
-	"channel_build/internal/cli"
-	"channel_build/internal/embedx"
-	"channel_build/internal/i18n"
-	"channel_build/internal/proc"
-	"channel_build/internal/progress"
-	"channel_build/internal/project"
-	"channel_build/internal/report"
-	"channel_build/internal/vasdolly"
+	"github.com/DeAikon/DollyGo/internal/build"
+	"github.com/DeAikon/DollyGo/internal/cli"
+	"github.com/DeAikon/DollyGo/internal/embedx"
+	"github.com/DeAikon/DollyGo/internal/i18n"
+	"github.com/DeAikon/DollyGo/internal/proc"
+	"github.com/DeAikon/DollyGo/internal/progress"
+	"github.com/DeAikon/DollyGo/internal/project"
+	"github.com/DeAikon/DollyGo/internal/report"
+	"github.com/DeAikon/DollyGo/internal/vasdolly"
 )
 
 // 内嵌资源（Go embed 不支持 ".."，故声明在模块根的 main 包）。
@@ -81,7 +81,7 @@ func run() int {
 	w := os.Stderr
 
 	// 临时目录 + 释放内嵌资源（信号清理依赖它，故尽早创建）。
-	tmpDir, err := os.MkdirTemp("", "channelbuild-*")
+	tmpDir, err := os.MkdirTemp("", "dollygo-*")
 	if err != nil {
 		report.Emit(report.Result{Success: false, Error: "internal: mkdtemp: " + err.Error(), DurationMs: ms()}, jsonOut)
 		return report.Internal

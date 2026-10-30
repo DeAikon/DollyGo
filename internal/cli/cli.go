@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"strings"
 
-	"channel_build/internal/i18n"
+	"github.com/DeAikon/DollyGo/internal/i18n"
 )
 
 // Version 是工具版本号（help 头部与 README 体现，见 R21）。
@@ -124,10 +124,10 @@ func Parse(args []string) (*Options, error) {
 	return o, nil
 }
 
-const helpTextEN = `channelbuild v` + Version + ` - VasDolly multi-channel APK build tool
+const helpTextEN = `DollyGo v` + Version + ` - VasDolly multi-channel APK build tool
 
 Usage:
-  channelbuild -p <project-path> [options]
+  dollygo -p <project-path> [options]
 
 Options:
   -p, --project <path>        Project root (directory containing gradlew) [required]
@@ -160,10 +160,10 @@ Output:
   machine signal. Progress and interactive prompts are printed to stderr.
 `
 
-const helpTextZH = `channelbuild v` + Version + ` - VasDolly 多渠道打包工具
+const helpTextZH = `DollyGo v` + Version + ` - VasDolly 多渠道打包工具
 
 用法:
-  channelbuild -p <项目路径> [选项]
+  dollygo -p <项目路径> [选项]
 
 参数:
   -p, --project <path>        项目根路径（含 gradlew 的目录）【必填】
