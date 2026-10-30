@@ -1,0 +1,8 @@
+# 默认渠道清单（每行一个渠道，支持 # 注释）
+Official
+Xiaomi
+Oppo
+Vivo
+Huawei
+Honor
+Tencent

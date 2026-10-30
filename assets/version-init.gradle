@@ -1,0 +1,15 @@
+// Gradle init script：只读打印 :app 的 versionName / versionCode，不修改项目任何文件。
+// 用法：./gradlew -q --no-configuration-cache -I <this> :app:printAppVersion
+gradle.allprojects { p ->
+    p.afterEvaluate {
+        if (p.plugins.hasPlugin('com.android.application')) {
+            p.tasks.register('printAppVersion') {
+                doLast {
+                    def android = p.extensions.getByName('android')
+                    println "VERSION_NAME=${android.defaultConfig.versionName}"
+                    println "VERSION_CODE=${android.defaultConfig.versionCode}"
+                }
+            }
+        }
+    }
+}
